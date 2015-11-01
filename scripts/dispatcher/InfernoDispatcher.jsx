@@ -1,10 +1,10 @@
-var SmallConstants = require('../constants/InfernoConstants.js');
+var InfernoConstants = require('../constants/InfernoConstants.js');
 var Dispatcher = require('flux').Dispatcher;
 var assign = require('object-assign');
 
-var PayloadSources = SmallConstants.PayloadSources;
+var PayloadSources = InfernoConstants.PayloadSources;
 
-var SmallAppDispatcher = assign(new Dispatcher(), {
+var InfernoDispatcher = assign(new Dispatcher(), {
 
   handleServerAction: function(action) {
     var payload = {
