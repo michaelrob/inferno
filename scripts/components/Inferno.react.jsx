@@ -11,7 +11,7 @@ function getStateFromStores() {
   };
 }
 
-var SmallApp = React.createClass({
+var Inferno = React.createClass({
 
   getInitialState: function() {
     return getStateFromStores();
