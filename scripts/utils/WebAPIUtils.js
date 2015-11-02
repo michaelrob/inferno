@@ -4,7 +4,7 @@ var request = require('superagent');
 module.exports = {
 
   login: function(email, password) {
-    request.post('http://localhost:3002/v1/login')
+    request.post('http://localhost:3000/v1/login')
       .send({ username: email, password: password, grant_type: 'password' })
       .set('Accept', 'application/json')
       .end(function(error, res){
