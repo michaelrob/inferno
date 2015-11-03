@@ -12,7 +12,7 @@ var SignupPage = require('./components/session/SignupPage.react.jsx');
 
 module.exports = (
   <Route name="app" path="/" handler={Inferno}>
-    <DefaultRoute handler={StoriesPage} />
+    <DefaultRoute handler={StoriesPage}/>
     <Route name="login" path="/login" handler={LoginPage}/>
     <Route name="signup" path="/signup" handler={SignupPage}/>
     <Route name="stories" path="/stories" handler={StoriesPage}/>
