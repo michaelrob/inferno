@@ -1,5 +1,5 @@
-var SmallAppDispatcher = require('../dispatcher/InfernoDispatcher.js');
-var SmallConstants = require('../constants/InfernoConstants.js');
+var InfernoDispatcher = require('../dispatcher/InfernoDispatcher.js');
+var InfernoConstants = require('../constants/InfernoConstants.js');
 var WebAPIUtils = require('../utils/WebAPIUtils.js');
 
 var ActionTypes = InfernoConstants.ActionTypes;

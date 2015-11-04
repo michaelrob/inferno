@@ -42,4 +42,4 @@ var Inferno = React.createClass({
 
 });
 
-module.exports = SmallApp;
+module.exports = Inferno;
