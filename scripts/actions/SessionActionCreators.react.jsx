@@ -10,6 +10,7 @@ module.exports = {
     InfernoDispatcher.handleViewAction({
       type: ActionTypes.SIGNUP_REQUEST,
       email: email,
+      username: username,
       password: password,
       passwordConfirmation: passwordConfirmation
     });
