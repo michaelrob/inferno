@@ -1,4 +1,5 @@
 var ServerActionCreators = require('../actions/ServerActionCreators.react.jsx');
+var InfernoConstants = require('../constants/InfernoConstants.js');
 var request = require('superagent');
 
 function _getErrors(res) {
@@ -18,25 +19,24 @@ var APIEndpoints = InfernoConstants.APIEndpoints;
 module.exports = {
 
   signup: function(email, username, password, passwordConfirmation) {
-    request.post(APIEndpoints.REGISTRATION)
-      .send({ user: {
-        email: email,
-        username: username,
-        password: password,
-        password_confirmation: passwordConfirmation
-      }})
-      .set('Accept', 'application/json')
-      .end(function(error, res) {
-        if (res) {
-          if (res.error) {
-            var errorMsgs = _getErrors(res);
-            ServerActionCreators.receiveLogin(null, errorMsgs);
-          } else {
-            json = JSON.parse(res.text);
-            ServerActionCreators.receiveLogin(json, null);
-          }
+    request.post(APIEndpoints.REGISTRATION).send({ user: {
+      email: email,
+      username: username,
+      password: password,
+      password_confirmation: passwordConfirmation
+    }})
+    .set('Accept', 'application/json')
+    .end(function(error, res) {
+      if (res) {
+        if (res.error) {
+          var errorMsgs = _getErrors(res);
+          ServerActionCreators.receiveLogin(null, errorMsgs);
+        } else {
+          json = JSON.parse(res.text);
+          ServerActionCreators.receiveLogin(json, null);
         }
-      });
+      }
+    });
   },
 
   login: function(email, password) {
