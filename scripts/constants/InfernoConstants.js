@@ -19,6 +19,8 @@ module.exports = {
     // Session
     LOGIN_REQUEST: null,
     LOGIN_RESPONSE: null,
+    LOGOUT: null,
+    SIGNUP_REQUEST: null,
 
     // Routes
     REDIRECT: null,
@@ -30,5 +32,4 @@ module.exports = {
     CREATE_STORY: null,
     RECEIVE_CREATED_STORY: null
   })
-
 };
