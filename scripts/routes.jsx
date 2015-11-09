@@ -16,7 +16,8 @@ module.exports = (
     <Route name="login" path="/login" handler={LoginPage}/>
     <Route name="signup" path="/signup" handler={SignupPage}/>
     <Route name="stories" path="/stories" handler={StoriesPage}/>
-    // <Route name="story" path="/stories/:storyId" handler={StoryPage} />
-    // <Route name="new-story" path="/story/new" handler={StoryNew}/>
-  </Route>
+    </Route>
 );
+
+// <Route name="story" path="/stories/:storyId" handler={StoryPage} />
+// <Route name="new-story" path="/story/new" handler={StoryNew}/>
