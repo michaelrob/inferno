@@ -136,7 +136,7 @@ gulp.task('watchTask', function() {
   gulp.watch(p.scssSource, ['styles']);
 });
 
-gulp.task('watch', ['clean'], function() {
+gulp.task('serve', ['clean'], function() {
   gulp.start(['libs', 'browserSync', 'watchTask', 'watchify', 'styles']);
 });
 
