@@ -20,7 +20,7 @@ var Header = React.createClass({
         <li><a href='#' onClick={this.logout}>Logout</a></li>
       </ul>
     ) : (
-      <ul className="nav navbar-right">
+      <ul className="nav navbar-nav navbar-right">
         <li><Link to="login">Login</Link></li>
         <li><Link to="signup">Sign up</Link></li>
       </ul>
@@ -44,7 +44,7 @@ var Header = React.createClass({
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Project name</a>
+            <a className="navbar-brand" href="#">Kookaburra</a>
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             {leftNav}
