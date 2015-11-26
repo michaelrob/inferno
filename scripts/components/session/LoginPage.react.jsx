@@ -34,7 +34,7 @@ var LoginPage = React.createClass({
       <div>
         {errors}
         <div className="row">
-          <div className="card card--login small-10 medium-6 large-4 columns small-centered">
+          <div className="card card--login col-sm-10 col-md-6 col-lg-4">
             <form onSubmit={this._onSubmit}>
               <div className="card--login__field">
                 <label name="email">Email</label>

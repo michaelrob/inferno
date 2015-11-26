@@ -16,42 +16,41 @@ var Header = React.createClass({
   },
   render: function() {
     var rightNav = this.props.isLoggedIn ? (
-      <ul className="right">
-        <li className="has-dropdown">
-          <a href="#">{this.props.email}</a>
-          <ul className="dropdown">
-            <li><a href='#' onClick={this.logout}>Logout</a></li>
-          </ul>
-        </li>
+      <ul className="nav navbar-nav navbar-right">
+        <li><a href='#' onClick={this.logout}>Logout</a></li>
       </ul>
     ) : (
-      <ul className="right">
+      <ul className="nav navbar-right">
         <li><Link to="login">Login</Link></li>
         <li><Link to="signup">Sign up</Link></li>
       </ul>
     );
 
     var leftNav = this.props.isLoggedIn ? (
-      <ul className="left">
-        <li><Link to="stories">New story</Link></li>
+      <ul className="nav navbar-nav">
+        <li><a href="stories">New story</a></li>
       </ul>
     ) : (
       <div></div>
     );
 
     return (
-      <nav className="top-bar" data-topbar role="navigation">
-        <ul className="title-area">
-          <li className="name">
-            <h1><a href="#"><strong>S</strong></a></h1>
-          </li>
-          <li className="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <section className="top-bar-section">
-          {rightNav}
-          {leftNav}
-        </section>
+      <nav className="navbar navbar-inverse navbar-fixed-top">
+        <div className="container">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <a className="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" className="collapse navbar-collapse">
+            {leftNav}
+            {rightNav}
+          </div>
+        </div>
       </nav>
     );
   }
