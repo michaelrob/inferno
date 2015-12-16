@@ -6,9 +6,9 @@ var DefaultRoute = Router.DefaultRoute;
 var Inferno = require('./components/Inferno.react.jsx');
 var LoginPage = require('./components/session/LoginPage.react.jsx');
 var StoriesPage = require('./components/stories/StoriesPage.react.jsx');
+var SignupPage = require('./components/session/SignupPage.react.jsx');
 // var StoryPage = require('./components/stories/StoryPage.react.jsx');
 // var StoryNew = require('./components/stories/StoryNew.react.jsx');
-var SignupPage = require('./components/session/SignupPage.react.jsx');
 
 module.exports = (
   <Route name="app" path="/" handler={Inferno}>
