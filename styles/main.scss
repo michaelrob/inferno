@@ -13,18 +13,16 @@ body {
 }
 
 .login {
-  margin-top: 60px;
 }
 
 .error-notice {
   position: absolute;
-  top: $topbar-height;
+  top: 35px;
   width: 100%;
   z-index: 9999;
   background-color: #E44646;
   color: white;
   text-align: center;
-  padding: 5px;
   ul {
     list-style: none;
     margin: 0;
