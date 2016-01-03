@@ -34,17 +34,20 @@ var LoginPage = React.createClass({
       <div>
         {errors}
         <div className="row">
-          <div className="card card--login small-10 medium-6 large-4 columns small-centered">
+          <div className="login col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
             <form onSubmit={this._onSubmit}>
-              <div className="card--login__field">
-                <label name="email">Email</label>
-                <input type="text" name="email" ref="email" />
+
+              <div className="form-group">
+                <label name="email" htmlFor="email">Email</label>
+                <input type="email" name="email" className="form-control" ref="email" id="email" />
               </div>
-              <div className="card--login__field">
-                <label name="password">Password</label>
-                <input type="password" name="password" ref="password" />
+
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input type="text" name="password" className="form-control" id="password" />
               </div>
-              <button type="submit" className="card--login__submit">Login</button>
+
+              <button type="submit" className="btn btn-default card--login__submit">Login</button>
             </form>
           </div>
         </div>

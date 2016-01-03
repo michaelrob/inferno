@@ -41,25 +41,30 @@ var SignupPage = React.createClass({
       <div>
         {errors}
         <div className="row">
-          <div className="card card--login small-10 medium-6 large-4 columns small-centered">
+          <div className="login col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
             <form onSubmit={this._onSubmit}>
-              <div className="card--login__field">
-                <label name="email">Email</label>
-                <input type="text" name="email" ref="email" />
+
+              <div className="form-group">
+                <label name="email" htmlFor="email">Email</label>
+                <input type="email" name="email" className="form-control" ref="email" id="email" />
               </div>
-              <div className="card--login__field">
-                <label name="username">Username</label>
-                <input type="text" name="username" ref="username" />
+
+              <div className="form-group">
+                <label name="username" htmlFor="username">Username</label>
+                <input type="text" name="username" className="form-control" ref="username" id="username" />
               </div>
-              <div className="card--login__field">
-                <label name="password">Password</label>
-                <input type="password" name="password" ref="password" />
+
+              <div className="form-group">
+                <label name="password" htmlFor="password">Password</label>
+                <input type="password" name="password" className="form-control" ref="password" id="password" />
               </div>
-              <div className="card--login__field">
-                <label name="password-confrimation">Password confirmation</label>
-                <input type="password" name="password-confirmation" ref="passwordConfirmation" />
+
+              <div className="form-group">
+                <label name="password" htmlFor="password-confirmation">Password Confirmation</label>
+                <input type="password" name="password-confirmation" className="form-control" ref="passwordConfirmation" id="passwordConfirmation" />
               </div>
-              <button type="submit" className="card--login__submit">Signup</button>
+
+              <button type="submit" className="btn btn-default card--login__submit">Signup</button>
             </form>
           </div>
         </div>

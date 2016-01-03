@@ -95,6 +95,12 @@ gulp.task('modernizr', function() {
   .pipe(gulp.dest(p.distJs));
 });
 
+// bootstrap
+gulp.task('bootstrap', function() {
+  return gulp.src('bower_components/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(gulp.dest(p.distCss))
+});
+
 gulp.task('bower-libs', function() {
   var jsFilter = gulpFilter('*.js', {restore: true});
   var cssFilter = gulpFilter('*.css', {restore: true});
@@ -129,14 +135,14 @@ gulp.task('bower-libs', function() {
 });
 
 gulp.task('libs', function() {
-  gulp.start(['modernizr', 'bower-libs', 'fonts']);
+  gulp.start(['modernizr', 'bower-libs', 'fonts', 'bootstrap']);
 });
 
 gulp.task('watchTask', function() {
   gulp.watch(p.scssSource, ['styles']);
 });
 
-gulp.task('watch', ['clean'], function() {
+gulp.task('serve', ['clean'], function() {
   gulp.start(['libs', 'browserSync', 'watchTask', 'watchify', 'styles']);
 });
 

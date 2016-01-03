@@ -48,16 +48,16 @@ var StoriesPage = React.createClass({
 var StoryItem = React.createClass({
   render: function() {
     return (
-      <li className="story">
-        <div className="story__title">
+      <div className="story">
+        <div className="story-title">
           <Link to="story" params={ {storyId: this.props.story.id} }>
             {this.props.story.title}
           </Link>
         </div>
-        <div className="story__body">{this.props.story['abstract']}...</div>
-        <span className="story__user">{this.props.story.user.username}</span>
-        <span className="story__date"> - {moment(this.props.story.created_at).fromNow()}</span>
-      </li>
+        <div className="story-body">{this.props.story['abstract']}...</div>
+        <span className="story-user">{this.props.story.user.username}</span>
+        <span className="story-date"> - {moment(this.props.story.created_at).fromNow()}</span>
+      </div>
       );
   }
 });
@@ -65,11 +65,11 @@ var StoryItem = React.createClass({
 var StoriesList = React.createClass({
   render: function() {
     return (
-      <ul className="large-8 medium-10 small-12 small-centered columns">
+      <div className="col-lg-8 col-md-10 col-sm-12">
         {this.props.stories.map(function(story, index){
           return <StoryItem story={story} key={"story-" + index}/>
         })}
-      </ul>
+      </div>
     );
   }
 });
