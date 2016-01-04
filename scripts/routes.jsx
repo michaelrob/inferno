@@ -17,7 +17,7 @@ module.exports = (
     <Route name="signup" path="/signup" handler={SignupPage}/>
     <Route name="stories" path="/stories" handler={StoriesPage}/>
     <Route name="story" path="/stories/:storyId" handler={StoryPage} />
-    </Route>
+  </Route>
 );
 
 //
