@@ -19,12 +19,14 @@ var APIEndpoints = InfernoConstants.APIEndpoints;
 module.exports = {
 
   signup: function(email, username, password, passwordConfirmation) {
-    request.post(APIEndpoints.REGISTRATION).send({ user: {
-      email: email,
-      username: username,
-      password: password,
-      password_confirmation: passwordConfirmation
-    }})
+    request.post(APIEndpoints.REGISTRATION).send({
+      user: {
+        email: email,
+        username: username,
+        password: password,
+        password_confirmation: passwordConfirmation
+      }
+    })
     .set('Accept', 'application/json')
     .end(function(error, res) {
       if (res) {
