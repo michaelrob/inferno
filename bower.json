@@ -4,6 +4,7 @@
   "dependencies": {
     "normalize.css": "~3.0.2",
     "bootstrap": "~3.3.6",
-    "modernizr": "^2.8.3"
+    "modernizr": "^2.8.3",
+    "Sortable": "1.4.2"
   }
 }
