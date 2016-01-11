@@ -66,9 +66,11 @@ var StoriesList = React.createClass({
   render: function() {
     return (
       <div className="col-lg-8 col-md-10 col-sm-12">
-        {this.props.stories.map(function(story, index){
-          return <StoryItem story={story} key={"story-" + index}/>
-        })}
+        <div className="story-column">
+          {this.props.stories.map(function(story, index){
+            return <StoryItem story={story} key={"story-" + index}/>
+          })}
+        </div>
       </div>
     );
   }
