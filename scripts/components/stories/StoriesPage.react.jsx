@@ -6,6 +6,8 @@ var StoryActionCreators = require('../../actions/StoryActionCreators.react.jsx')
 var Router = require('react-router');
 var Link = Router.Link;
 var moment = require('moment');
+var Sortable = require('sortablejs');
+var SortableMixin = require('sortablejs/react-sortable-mixin');
 
 var StoriesPage = React.createClass({
 
@@ -63,6 +65,12 @@ var StoryItem = React.createClass({
 });
 
 var StoriesList = React.createClass({
+  mixins: [SortableMixin],
+
+  handleSort: function (evt) {
+    /* Sorting things */
+  },
+
   render: function() {
     return (
       <div className="col-lg-8 col-md-10 col-sm-12">
