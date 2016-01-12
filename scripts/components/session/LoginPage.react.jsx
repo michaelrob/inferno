@@ -44,7 +44,7 @@ var LoginPage = React.createClass({
 
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" className="form-control" id="password" />
+                <input type="password" name="password" className="form-control" ref="password" id="password" />
               </div>
 
               <button type="submit" className="btn btn-default card--login__submit">Login</button>
