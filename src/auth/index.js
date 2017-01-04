@@ -17,7 +17,7 @@ export default {
   // Send a request to the login URL and save the returned JWT
   login(context, creds, redirect) {
     context.$http.post(LOGIN_URL, creds, (data) => {
-      localStorage.setItem('id_token', data.access_token)
+      localStorage.setItem('access_token', data.access_token)
 
       this.user.authenticated = true
 
@@ -33,7 +33,7 @@ export default {
 
   signup(context, creds, redirect) {
     context.$http.post(SIGNUP_URL, creds, (data) => {
-      localStorage.setItem('id_token', data.access_token)
+      localStorage.setItem('access_token', data.access_token)
 
       this.user.authenticated = true
 
@@ -48,12 +48,12 @@ export default {
 
   // To log out, we just need to remove the token
   logout() {
-    localStorage.removeItem('id_token')
+    localStorage.removeItem('access_token')
     this.user.authenticated = false
   },
 
   checkAuth() {
-    var jwt = localStorage.getItem('id_token')
+    var jwt = localStorage.getItem('access_token')
     if(jwt) {
       this.user.authenticated = true
     }
@@ -65,7 +65,7 @@ export default {
   // The object to be passed as a header for authenticated requests
   getAuthHeader() {
     return {
-      'Authorization': 'Bearer ' + localStorage.getItem('id_token')
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
     }
   }
 }
