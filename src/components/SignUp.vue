@@ -3,7 +3,7 @@
  <template>
    <div class="col-sm-4 col-sm-offset-4">
      <h2>Sign Up</h2>
-     <p>Sign Up to your account to get some great quotes.</p>
+     <p>Sign up for awesome things.</p>
      <div class="alert alert-danger" v-if="error">
        <p>{{ error }}</p>
      </div>
@@ -11,8 +11,8 @@
        <input
          type="text"
          class="form-control"
-         placeholder="Enter your username"
-         v-model="credentials.username"
+         placeholder="Enter your email address"
+         v-model="credentials.email"
        >
      </div>
      <div class="form-group">
@@ -32,10 +32,8 @@
  export default {
    data() {
      return {
-       // We need to initialize the component with any
-       // properties that will be used in it
        credentials: {
-         username: '',
+         email: '',
          password: ''
        },
        error: ''
@@ -47,8 +45,6 @@
          username: this.credentials.username,
          password: this.credentials.password
        }
-       // We need to pass the component's this context
-       // to properly make use of http in the auth service
        auth.signup(this, credentials, 'secretquote')
      }
    }
