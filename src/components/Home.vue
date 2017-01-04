@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import auth from '../auth'
 export default {
   data() {
     return {
@@ -15,9 +16,16 @@ export default {
     getQuote() {
       this.$http
         .get('http://localhost:3001/v1/stories', (data) => {
+          // toDo: it might be a good idea to store this data locally at some
+          // stage so we can reduce loading times. 
           this.stories = data;
         })
         .error((err) => console.log(err))
+    }
+  },
+  route: {
+    canActivate() {
+      return auth.user.authenticated
     }
   }
 }
