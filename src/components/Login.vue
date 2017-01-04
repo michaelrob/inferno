@@ -11,8 +11,8 @@
        <input
          type="text"
          class="form-control"
-         placeholder="Enter your username"
-         v-model="credentials.username"
+         placeholder="Enter your email address"
+         v-model="credentials.email"
        >
      </div>
      <div class="form-group">
@@ -32,10 +32,8 @@
  export default {
    data() {
      return {
-       // We need to initialize the component with any
-       // properties that will be used in it
        credentials: {
-         username: '',
+         email: '',
          password: ''
        },
        error: ''
@@ -44,12 +42,10 @@
    methods: {
      submit() {
        var credentials = {
-         username: this.credentials.username,
+         username: this.credentials.email,
          password: this.credentials.password
        }
-       // We need to pass the component's this context
-       // to properly make use of http in the auth service
-       auth.login(this, credentials, 'secretquote')
+       auth.login(this, credentials, 'stories')
      }
    }
 
