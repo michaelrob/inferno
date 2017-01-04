@@ -31,8 +31,6 @@
      }
    },
    route: {
-     // Check the users auth status before
-     // allowing navigation to the route
      canActivate() {
        return auth.user.authenticated
      }
