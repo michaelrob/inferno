@@ -1,11 +1,13 @@
  <template>
      <!-- This will populate our list of tasks -->
-     <ul id="story-list">
-      <li v-for="story in stories">
-        {{ story.title }}
-        {{ story.desscription }}
-      </li>
-    </ul>
+     <div class="col-sm-12">
+       <ul id="story-list">
+        <li v-for="story in stories">
+          {{ story.title }}
+          {{ story.desscription }}
+        </li>
+      </ul>
+     </div>
  </template>
 
  <script>
