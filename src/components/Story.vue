@@ -16,7 +16,7 @@
    el: 'story-list',
    data() {
      return {
-       stories: ''
+       story: ''
      }
    },
    methods: {
@@ -25,7 +25,7 @@
        // it elsewhere. Also, its just good design.
        this.$http
          .get('http://localhost:3001/v1/stories/' + story_id, (data) => {
-           this.stories = data;
+           this.story = data;
          }, {
            headers: auth.getAuthHeader()
          })
