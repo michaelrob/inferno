@@ -13,11 +13,12 @@ export default {
     }
   },
   methods: {
-    getQuote() {
+    getStories() {
       this.$http
         .get('http://localhost:3001/v1/stories', (data) => {
           // toDo: it might be a good idea to store this data locally at some
-          // stage so we can reduce loading times. 
+          // stage so we can reduce loading times.
+          // We also need to move this to its own class.
           this.stories = data;
         })
         .error((err) => console.log(err))
