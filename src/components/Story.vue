@@ -24,7 +24,7 @@
        // ToDo: move this method into its own class, we will probably want to use
        // it elsewhere. Also, its just good design.
        this.$http
-         .get('http://localhost:3001/v1/stories', (data) => {
+         .get('http://localhost:3001/v1/stories/' + story_id, (data) => {
            this.stories = data;
          }, {
            headers: auth.getAuthHeader()
