@@ -21,6 +21,8 @@
    },
    methods: {
      getStory() {
+       // ToDo: move this method into its own class, we will probably want to use
+       // it elsewhere. Also, its just good design.
        this.$http
          .get('http://localhost:3001/v1/stories', (data) => {
            this.stories = data;
