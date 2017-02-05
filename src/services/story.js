@@ -1,4 +1,6 @@
 
+const API_URL = 'http://localhost:3001/v1/'
+const STORY_URL = API_URL + 'stories'
 
 export default {
 
@@ -13,5 +15,12 @@ export default {
         headers: auth.getAuthHeader()
       })
       .error((err) => console.log(err))
+  }
+
+  // Gets all stories for user
+  // takes: context
+  // returns: all user story content
+  getStories(context) {
+
   }
 }
