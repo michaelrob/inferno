@@ -1,6 +1,12 @@
 <template>
   <div class="col-sm-12">
-    {{ information }}
+    <p v-if="!user.authenticated">
+      Please sign up or log in :)
+    </p>
+    <p v-else>
+      You're logged in, please do something
+      <!-- Add in something to show stories -->
+    </p>
   </div>
 </template>
 
@@ -9,7 +15,7 @@ import auth from '../auth'
 export default {
   data() {
     return {
-      information: 'Please sign up or log in :)'
+      user: auth.user
     }
   }
 }
