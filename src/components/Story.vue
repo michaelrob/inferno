@@ -13,7 +13,6 @@
  <script>
  import auth from '../auth'
  export default {
-   el: 'story-list',
    data() {
      return {
        story: ''
@@ -31,6 +30,9 @@
          })
          .error((err) => console.log(err))
      }
+   },
+   ready() {
+     this.getStory()
    },
    route: {
      canActivate() {
