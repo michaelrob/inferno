@@ -12,7 +12,7 @@
 
  <script>
  import auth from '../auth'
- import services from '../services/story'
+ import services from '../services'
  export default {
    data() {
      return {
@@ -20,7 +20,7 @@
      }
    },
    methods: {
-     getStory(this, story_id)
+     services.getStory(this, story_id)
    },
    ready() {
      this.getStory()
