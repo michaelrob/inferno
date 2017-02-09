@@ -15,7 +15,7 @@ export default {
         headers: auth.getAuthHeader()
       })
       .error((err) => console.log(err))
-  }
+  },
 
   // Gets all stories for user
   // takes: context
