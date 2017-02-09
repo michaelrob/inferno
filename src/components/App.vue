@@ -1,5 +1,3 @@
-<!-- src/components/App.vue -->
-
 <template>
   <nav class="navbar navbar-default">
     <div class="container">
