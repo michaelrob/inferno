@@ -21,6 +21,12 @@ export default {
   // takes: context
   // returns: all user story content
   getStories(context) {
-
+    this.$http
+      .get('http://localhost:3001/v1/stories/', (data) => {
+        this.story = data;
+      }, {
+        headers: auth.getAuthHeader()
+      })
+      .error((err) => console.log(err))
   }
 }
