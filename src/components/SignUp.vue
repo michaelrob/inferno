@@ -12,7 +12,7 @@
          type="text"
          class="form-control"
          placeholder="Enter your email address"
-         v-model="credentials.email"
+         v-model="user.email"
        >
      </div>
      <div class="form-group">
@@ -20,7 +20,7 @@
          type="password"
          class="form-control"
          placeholder="Enter your password"
-         v-model="credentials.password"
+         v-model="user.password"
        >
      </div>
      <button class="btn btn-primary" @click="submit()">Signup</button>
@@ -32,9 +32,10 @@
  export default {
    data() {
      return {
-       credentials: {
+       user: {
          email: '',
-         password: ''
+         password: '',
+         password_confirmation: ''
        },
        error: ''
      }
@@ -42,10 +43,13 @@
    methods: {
      submit() {
        var credentials = {
-         username: this.credentials.username,
-         password: this.credentials.password
+         user: {
+           email: this.user.email,
+           password: this.user.password,
+           password_confirmation: this.user.password
+         }
        }
-       auth.signup(this, credentials, 'secretquote')
+       auth.signup(this, credentials, 'home')
      }
    }
 
