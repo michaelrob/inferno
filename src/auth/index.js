@@ -3,9 +3,9 @@
 import {router} from '../index'
 
 // URL and endpoint constants
-const API_URL = 'http://localhost:3001/v1/'
-const LOGIN_URL = API_URL + 'users/create'
-const SIGNUP_URL = API_URL + 'sessions/create'
+const API_URL = 'http://localhost:3000/v1/'
+const LOGIN_URL = API_URL + 'login'
+const SIGNUP_URL = API_URL + 'users'
 
 export default {
 
