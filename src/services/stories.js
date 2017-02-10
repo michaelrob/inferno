@@ -9,7 +9,7 @@ export default {
   // returns: story content
   getStory(context, story_id) {
     this.$http
-      .get('http://localhost:3000/v1/stories/' + story_id, (data) => {
+      .get(API_URL + 'stories/' + story_id, (data) => {
         this.story = data;
       }, {
         headers: auth.getAuthHeader()
@@ -22,7 +22,7 @@ export default {
   // returns: all user story content
   getStories(context) {
     this.$http
-      .get('http://localhost:3000/v1/stories/', (data) => {
+      .get(API_URL + 'stories/', (data) => {
         this.story = data;
       }, {
         headers: auth.getAuthHeader()
