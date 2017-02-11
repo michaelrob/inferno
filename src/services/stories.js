@@ -30,7 +30,7 @@ export default {
         headers: auth.getAuthHeader()
       })
       .error((err) => console.log(err))
-  }
+  },
 
   // Posts new story for the user
   // takes: input
