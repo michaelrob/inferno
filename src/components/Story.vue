@@ -1,12 +1,13 @@
  <template>
      <!-- This will populate our list of tasks -->
      <div class="col-sm-12">
-       <ul id="story-list">
-        <li v-for="story in stories">
-          {{ story.title }}
-          {{ story.desscription }}
-        </li>
-      </ul>
+       <div v-if="story">
+        {{ story.title }}
+        {{ story.desscription }}
+      </div>
+      <div v-else>
+        There are no stories :(.
+      </div>
      </div>
  </template>
 
@@ -20,12 +21,12 @@
      }
    },
    methods: {
-     stories() {
+     story() {
        services.getStory(this, story_id)
      }
    },
    ready() {
-     this.stories()
+     story()
    },
    route: {
      canActivate() {
