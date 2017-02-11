@@ -7,6 +7,7 @@ import Home from './components/Home.vue'
 import SignUp from './components/SignUp.vue'
 import Login from './components/Login.vue'
 import Story from './components/Story.vue'
+import Stories from './components/Stories.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
@@ -25,14 +26,17 @@ router.map({
   '/home': {
     component: Home
   },
-  '/story': {
-    component: Story
-  },
   '/login': {
     component: Login
   },
   '/signup': {
     component: SignUp
+  },
+  '/story': {
+    component: Story
+  },
+  '/stories': {
+    component: Stories
   }
 })
 
