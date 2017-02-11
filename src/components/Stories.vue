@@ -1,7 +1,7 @@
 <template>
     <!-- This will populate our list of tasks -->
     <div class="col-sm-12">
-      <div v-if="stories">
+      <div v-if="stories.length > 0">
        <ul>
          <li></li>
        </ul>
