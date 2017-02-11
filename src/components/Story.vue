@@ -21,12 +21,12 @@
      }
    },
    methods: {
-     story() {
+     getStory() {
        services.getStory(this, story_id)
      }
    },
    ready() {
-     story()
+     this.getStory()
    },
    route: {
      canActivate() {
