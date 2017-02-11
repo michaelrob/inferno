@@ -6,7 +6,7 @@
           <li><a v-link="'home'">Home</a></li>
           <li><a v-link="'login'" v-if="!user.authenticated">Login</a></li>
           <li><a v-link="'signup'" v-if="!user.authenticated">Sign Up</a></li>
-          <li><a v-link="'story'" v-if="user.authenticated">Story</a></li>
+          <li><a v-link="'stories'" v-if="user.authenticated">Stories</a></li>
           <li><a v-link="'login'" v-if="user.authenticated" @click="logout()">Logout</a></li>
         </ul>
       </div>
