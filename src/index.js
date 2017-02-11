@@ -32,7 +32,7 @@ router.map({
   '/signup': {
     component: SignUp
   },
-  '/story': {
+  '/story/:storyId': {
     component: Story
   },
   '/stories': {
