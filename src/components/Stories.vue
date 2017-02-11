@@ -18,16 +18,16 @@ import services from '../services/stories'
 export default {
   data() {
     return {
-      story: ''
+      stories: ''
     }
   },
   methods: {
-    story() {
-      services.getStory(this, story_id)
+    getStories() {
+      services.getStories(this)
     }
   },
   ready() {
-    story()
+    this.getStories()
   },
   route: {
     canActivate() {
