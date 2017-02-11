@@ -1,6 +1,6 @@
 
 const API_URL = 'http://localhost:3000/v1/'
-const STORY_URL = API_URL + 'stories'
+const STORY_URL = API_URL + 'stories/'
 
 export default {
 
@@ -8,8 +8,8 @@ export default {
   // takes: context, story_id
   // returns: story content
   getStory(context, story_id) {
-    this.$http
-      .get(API_URL + 'stories/' + story_id, (data) => {
+    context.$http
+      .get(API_URL + STORY_URL + story_id, (data) => {
         this.story = data;
       }, {
         headers: auth.getAuthHeader()
@@ -21,8 +21,8 @@ export default {
   // takes: context
   // returns: all user story content
   getStories(context) {
-    this.$http
-      .get(API_URL + 'stories/', (data) => {
+    context.$http
+      .get(API_URL + STORY_URL, (data) => {
         this.story = data;
       }, {
         headers: auth.getAuthHeader()
