@@ -35,9 +35,9 @@ export default {
   // Posts new story for the user
   // takes: input
   // returns: success or failure
-  postStory(context, story) {
+  postStory(context, title, description) {
     context.$http
-      .get(STORY_URL, (data) => {
+      .post(STORY_URL, (data) => {
         context.story = data;
       }, {
         headers: auth.getAuthHeader()
