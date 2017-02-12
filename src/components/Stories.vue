@@ -2,9 +2,12 @@
     <!-- This will populate our list of tasks -->
     <div class="col-sm-12">
       <div v-if="stories.length > 0">
-       <ul>
-         <li></li>
-       </ul>
+        <ul id="stories">
+          <li v-for="story in stories">
+            {{ story.title }}
+            {{ story.desscription }}
+          </li>
+        </ul>
      </div>
      <div v-else>
        There are no stories :(.
