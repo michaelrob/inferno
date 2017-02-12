@@ -22,7 +22,7 @@
    },
    methods: {
      getStory() {
-       services.getStory(this, story_id)
+       services.getStory(this, storyId)
      }
    },
    ready() {
