@@ -1,5 +1,3 @@
-// src/index.js
-
 import Vue from 'vue'
 import auth from './auth'
 import App from './components/App.vue'
