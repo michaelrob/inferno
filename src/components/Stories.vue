@@ -12,6 +12,7 @@
      <div v-else>
        There are no stories :(.
      </div>
+     <a v-link="'new'" class="btn btn-info" role="button">New Story</a>
     </div>
 </template>
 
