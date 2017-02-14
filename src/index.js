@@ -8,6 +8,7 @@ import SignUp from './components/SignUp.vue'
 import Login from './components/Login.vue'
 import Story from './components/Story.vue'
 import Stories from './components/Stories.vue'
+import NewStory from './components/NewStory.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
@@ -37,6 +38,9 @@ router.map({
   },
   '/stories': {
     component: Stories
+  },
+  '/new': {
+    component: NewStory
   }
 })
 
