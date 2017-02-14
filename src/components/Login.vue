@@ -1,5 +1,3 @@
-<!-- src/components/Login.vue -->
-
  <template>
    <div class="col-sm-4 col-sm-offset-4">
      <h2>Log In</h2>
