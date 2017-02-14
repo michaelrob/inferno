@@ -13,7 +13,7 @@
         <input type="text" class="form-control" placeholder="Enter a title" v-model="story.title">
       </div>
       <div class="form-group">
-        <input class="form-control" placeholder="Enter a description" v-model="story.description">
+        <textarea class="form-control" placeholder="Enter a description" v-model="story.description"></textarea>
       </div>
 
       <button class="btn btn-primary" @click="postStory()">Login</button>
@@ -46,3 +46,9 @@ export default {
   }
 }
 </script>
+
+<style>
+textarea {
+  max-width: 100%;
+}
+</style>
