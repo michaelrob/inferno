@@ -13,7 +13,7 @@
         <input type="text" class="form-control" placeholder="Enter a title" v-model="story.title">
       </div>
       <div class="form-group">
-        <textarea class="form-control" placeholder="Enter a description" v-model="story.description"></textarea>
+        <textarea class="form-control" placeholder="Enter a description" v-model="story.body"></textarea>
       </div>
 
       <button class="btn btn-primary" @click="postStory()">Login</button>
@@ -28,7 +28,7 @@ export default {
     return {
       story: {
         title: '',
-        description: ''
+        body: ''
       },
       success: '',
       error: ''
@@ -36,7 +36,11 @@ export default {
   },
   methods: {
     postStory() {
-      services.postStory(this)
+      var story = {
+        title: this.story.title,
+        body: this.story.body
+      }
+      services.postStory(this, story)
     }
   },
   route: {
