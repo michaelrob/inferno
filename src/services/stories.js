@@ -10,9 +10,9 @@ export default {
   // takes: context, story_id
   // returns: story content
   getStory(context, story_id) {
-    context.$http
-      .get(STORY_URL + story_id, (data) => {
-        context.story = data;
+    context.$http.get(STORY_URL + story_id, (data) => {
+
+        context.story = data.story;
       }, {
         headers: auth.getAuthHeader()
       })
@@ -23,9 +23,9 @@ export default {
   // takes: context
   // returns: all user story content
   getStories(context) {
-    context.$http
-      .get(STORY_URL, (data) => {
-        context.stories = data;
+    context.$http.get(STORY_URL, (data) => {
+      
+        context.stories = data.stories;
       }, {
         headers: auth.getAuthHeader()
       })
@@ -35,10 +35,10 @@ export default {
   // Posts new story for the user
   // takes: input
   // returns: success or failure
-  postStory(context, title, description) {
-    context.$http
-      .post(STORY_URL, (data) => {
-        context.story = data;
+  postStory(context, story) {
+    context.$http.post(STORY_URL, story, (data) => {
+
+        context.success = "New story posted!!"
       }, {
         headers: auth.getAuthHeader()
       })
