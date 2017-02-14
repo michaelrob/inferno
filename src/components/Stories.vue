@@ -1,17 +1,18 @@
 <template>
     <!-- This will populate our list of tasks -->
     <div class="col-sm-12">
-      <div v-if="stories.length > 0">
-        <ul id="stories">
-          <li v-for="story in stories">
+      <div v-if="stories">
+        <ul v-for="story in stories" id="stories">
+          <li>
             {{ story.title }}
-            {{ story.desscription }}
+            {{ story.body }}
           </li>
         </ul>
      </div>
      <div v-else>
        There are no stories :(.
      </div>
+     <br />
      <a v-link="'new'" class="btn btn-info" role="button">New Story</a>
     </div>
 </template>
