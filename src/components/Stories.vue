@@ -5,7 +5,7 @@
         <ul v-for="story in stories" id="stories">
           <li>
             {{ story.title }}
-            {{ story.body }}
+            {{ story.description }}
           </li>
         </ul>
      </div>
