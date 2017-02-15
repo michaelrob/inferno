@@ -1,11 +1,12 @@
 <template>
     <!-- This will populate our list of tasks -->
     <div class="col-sm-12">
-      <div v-if="stories">
-        <ul v-for="story in stories" id="stories">
-          <li>
-            {{ story.title }}
+      <div v-if="stories" class="stories">
+        <ul class="list-group">
+          <li v-for="story in stories" class="list-group-item">
+            {{ story.title }} |
             {{ story.description }}
+            <a v-link="'story/1'" class="badge">+</a>
           </li>
         </ul>
      </div>
@@ -41,3 +42,7 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>
