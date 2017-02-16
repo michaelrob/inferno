@@ -2,8 +2,11 @@
      <!-- This will populate our list of tasks -->
      <div class="col-sm-12">
        <div v-if="story">
+        {{ story.id }}
         {{ story.title }}
-        {{ story.desscription }}
+        {{ story.author }}
+        {{ story.description }}
+        {{ story.body }}
       </div>
       <div v-else>
         There are no stories :(.
