@@ -3,13 +3,13 @@
      <div class="col-sm-12">
        <div v-if="story">
         {{ story.id }}
-        {{ story.title }}
-        {{ story.author }}
-        {{ story.description }}
-        {{ story.body }}
+        <h2>{{ story.title }}</h2>
+        <p>{{ story.author }}</p>
+        <p>{{ story.description }}</p>
+        <p>{{ story.body }}</p>
       </div>
       <div v-else>
-        There are no stories :(.
+        There are no story :(.
       </div>
      </div>
  </template>
@@ -25,7 +25,7 @@
    },
    methods: {
      getStory() {
-       services.getStory(this, storyId)
+       services.getStory(this, this.$route.params.storyId)
      }
    },
    ready() {
