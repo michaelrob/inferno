@@ -6,7 +6,8 @@
           <li><a v-link="'home'">Home</a></li>
           <li><a v-link="'login'" v-if="!user.authenticated">Login</a></li>
           <li><a v-link="'signup'" v-if="!user.authenticated">Sign Up</a></li>
-          <li><a v-link="'stories'" v-if="user.authenticated">Stories</a></li>
+          <!-- this needs to be a dropdown with projects list -->
+          <li><a v-link="'projects'" v-if="user.authenticated">Projects</a></li>
           <li><a v-link="'login'" v-if="user.authenticated" @click="logout()">Logout</a></li>
         </ul>
       </div>
