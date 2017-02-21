@@ -34,8 +34,8 @@ router.map({
   '/story/:storyId': {
     component: Story
   },
-  '/stories': {
-    component: Stories
+  '/project/:projectId': {
+    component: Project // need to add project component
   },
   '/new': {
     component: NewStory
