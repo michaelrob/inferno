@@ -5,4 +5,11 @@ import auth from '../auth'
 
 export default {
 
+  getProject() {
+
+  }
+
+  getProjects() {
+    
+  }
 }
