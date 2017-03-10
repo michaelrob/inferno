@@ -6,9 +6,6 @@ import auth from '../auth'
 
 export default {
 
-  // Gets a user story
-  // takes: context, story_id
-  // returns: story content
   getStory(context, story_id) {
     context.$http.get(STORY_URL + story_id, (data) => {
 
@@ -19,12 +16,9 @@ export default {
       .error((err) => console.log(err))
   },
 
-  // Gets all stories for user
-  // takes: context
-  // returns: all user story content
   getStories(context) {
     context.$http.get(STORY_URL, (data) => {
-      
+
         context.stories = data.stories;
       }, {
         headers: auth.getAuthHeader()
@@ -32,9 +26,6 @@ export default {
       .error((err) => console.log(err))
   },
 
-  // Posts new story for the user
-  // takes: input
-  // returns: success or failure
   postStory(context, story) {
     context.$http.post(STORY_URL, story, (data) => {
 
