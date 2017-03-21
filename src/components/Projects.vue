@@ -23,7 +23,7 @@ import services from '../services/projects'
 export default {
   data() {
     return {
-      stories: ''
+      projects: ''
     }
   },
   methods: {

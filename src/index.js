@@ -6,6 +6,7 @@ import SignUp from './components/SignUp.vue'
 import Login from './components/Login.vue'
 import Story from './components/Story.vue'
 import Stories from './components/Stories.vue'
+import Projects from './components/Projects.vue'
 import NewStory from './components/NewStory.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -35,7 +36,7 @@ router.map({
     component: Story
   },
   '/project/:projectId': {
-    component: Project // need to add project component
+    component: Projects
   },
   '/new': {
     component: NewStory
